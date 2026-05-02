@@ -1,0 +1,167 @@
+L=32, N=1024, boundary=OBC, seed=7
+Training 36 temperatures: [0.1, 0.1218, 0.1434, 0.1647, 0.1856, 0.2061, 0.2262, 0.2459, 0.2651, 0.2839, 0.3022, 0.32, 0.3372, 0.3539, 0.37, 0.3855, 0.4003, 0.4144, 0.4278, 0.4405, 0.4527, 0.4649, 0.4778, 0.4921, 0.5082, 0.5264, 0.5471, 0.5707, 0.5979, 0.6296, 0.6671, 0.7126, 0.7697, 0.8452, 0.9545, 1.0]
+total_batch_size=2000  →  samples_per_temp=55
+Annealing strategy: THREE-PHASE CRITICAL over 8000 steps
+  Phase 1 (0-20%):  factor 0.00 -> 0.35 [fast warmup]
+  Phase 2 (20-70%): factor 0.35 -> 0.55 [critical wandering β_c≈0.44]
+  Phase 3 (70-100%):factor 0.55 -> 1.00 [low-T hardening]
+Z2 symmetry: ENABLED (LogProbWrapper)
+Hamiltonian: IsingHamiltonian(L=32, n=1024, boundary=OBC)
+
+Model: patched AR, patch_size=2, Z2-symmetric
+Parameters: 2,334,736
+
+Optimizer: muon, lr=0.001
+Scheduler: warmup(2000) + cosine(eta_min=1e-05)
+
+Starting training...
+----------------------------------------------------------------------
+Step 100/10000: annealing=0.0219 [P1:warmup], lr=5.95e-05, time=75.6s
+Step 200/10000: annealing=0.0437 [P1:warmup], lr=1.09e-04, time=148.4s
+Step 300/10000: annealing=0.0656 [P1:warmup], lr=1.59e-04, time=221.2s
+Step 400/10000: annealing=0.0875 [P1:warmup], lr=2.08e-04, time=294.0s
+Step 500/10000: annealing=0.1094 [P1:warmup], lr=2.58e-04, time=366.9s
+Step 600/10000: annealing=0.1312 [P1:warmup], lr=3.07e-04, time=439.7s
+Step 700/10000: annealing=0.1531 [P1:warmup], lr=3.57e-04, time=512.5s
+Step 800/10000: annealing=0.1750 [P1:warmup], lr=4.06e-04, time=585.4s
+Step 900/10000: annealing=0.1969 [P1:warmup], lr=4.56e-04, time=658.2s
+Step 1000/10000: annealing=0.2188 [P1:warmup], lr=5.05e-04, time=731.0s
+Step 1100/10000: annealing=0.2406 [P1:warmup], lr=5.55e-04, time=803.8s
+Step 1200/10000: annealing=0.2625 [P1:warmup], lr=6.04e-04, time=876.6s
+Step 1300/10000: annealing=0.2844 [P1:warmup], lr=6.54e-04, time=949.4s
+Step 1400/10000: annealing=0.3062 [P1:warmup], lr=7.03e-04, time=1022.2s
+Step 1500/10000: annealing=0.3281 [P1:warmup], lr=7.53e-04, time=1095.1s
+Step 1600/10000: annealing=0.3500 [P2:critical], lr=8.02e-04, time=1167.9s
+Step 1700/10000: annealing=0.3550 [P2:critical], lr=8.52e-04, time=1240.7s
+Step 1800/10000: annealing=0.3600 [P2:critical], lr=9.01e-04, time=1313.5s
+Step 1900/10000: annealing=0.3650 [P2:critical], lr=9.51e-04, time=1386.4s
+Step 2000/10000: annealing=0.3700 [P2:critical], lr=1.00e-03, time=1459.2s
+Step 2100/10000: annealing=0.3750 [P2:critical], lr=1.00e-03, time=1532.1s
+Step 2200/10000: annealing=0.3800 [P2:critical], lr=9.98e-04, time=1604.9s
+Step 2300/10000: annealing=0.3850 [P2:critical], lr=9.97e-04, time=1677.7s
+Step 2400/10000: annealing=0.3900 [P2:critical], lr=9.94e-04, time=1750.4s
+Step 2500/10000: annealing=0.3950 [P2:critical], lr=9.90e-04, time=1823.2s
+Step 2600/10000: annealing=0.4000 [P2:critical], lr=9.86e-04, time=1896.1s
+Step 2700/10000: annealing=0.4050 [P2:critical], lr=9.81e-04, time=1968.9s
+Step 2800/10000: annealing=0.4100 [P2:critical], lr=9.76e-04, time=2041.8s
+Step 2900/10000: annealing=0.4150 [P2:critical], lr=9.69e-04, time=2114.5s
+Step 3000/10000: annealing=0.4200 [P2:critical], lr=9.62e-04, time=2187.3s
+Step 3100/10000: annealing=0.4250 [P2:critical], lr=9.55e-04, time=2260.1s
+Step 3200/10000: annealing=0.4300 [P2:critical], lr=9.46e-04, time=2332.9s
+Step 3300/10000: annealing=0.4350 [P2:critical], lr=9.37e-04, time=2405.6s
+Step 3400/10000: annealing=0.4400 [P2:critical], lr=9.27e-04, time=2478.3s
+Step 3500/10000: annealing=0.4450 [P2:critical], lr=9.17e-04, time=2551.1s
+Step 3600/10000: annealing=0.4500 [P2:critical], lr=9.05e-04, time=2624.9s
+Step 3700/10000: annealing=0.4550 [P2:critical], lr=8.94e-04, time=2699.9s
+Step 3800/10000: annealing=0.4600 [P2:critical], lr=8.81e-04, time=2774.3s
+Step 3900/10000: annealing=0.4650 [P2:critical], lr=8.68e-04, time=2849.2s
+Step 4000/10000: annealing=0.4700 [P2:critical], lr=8.55e-04, time=2922.8s
+Step 4100/10000: annealing=0.4750 [P2:critical], lr=8.41e-04, time=2996.7s
+Step 4200/10000: annealing=0.4800 [P2:critical], lr=8.26e-04, time=3073.4s
+Step 4300/10000: annealing=0.4850 [P2:critical], lr=8.11e-04, time=3156.6s
+Step 4400/10000: annealing=0.4900 [P2:critical], lr=7.96e-04, time=3238.4s
+Step 4500/10000: annealing=0.4950 [P2:critical], lr=7.80e-04, time=3318.8s
+Step 4600/10000: annealing=0.5000 [P2:critical], lr=7.64e-04, time=3398.5s
+Step 4700/10000: annealing=0.5050 [P2:critical], lr=7.47e-04, time=3478.3s
+Step 4800/10000: annealing=0.5100 [P2:critical], lr=7.30e-04, time=3557.9s
+Step 4900/10000: annealing=0.5150 [P2:critical], lr=7.12e-04, time=3638.5s
+Step 5000/10000: annealing=0.5200 [P2:critical], lr=6.94e-04, time=3718.4s
+Step 5100/10000: annealing=0.5250 [P2:critical], lr=6.76e-04, time=3796.9s
+Step 5200/10000: annealing=0.5300 [P2:critical], lr=6.58e-04, time=3873.2s
+Step 5300/10000: annealing=0.5350 [P2:critical], lr=6.39e-04, time=3947.1s
+Step 5400/10000: annealing=0.5400 [P2:critical], lr=6.21e-04, time=4027.0s
+Step 5500/10000: annealing=0.5450 [P2:critical], lr=6.02e-04, time=4101.5s
+Step 5600/10000: annealing=0.5500 [P3:harden], lr=5.82e-04, time=4175.6s
+Step 5700/10000: annealing=0.5688 [P3:harden], lr=5.63e-04, time=4249.9s
+Step 5800/10000: annealing=0.5875 [P3:harden], lr=5.44e-04, time=4323.2s
+Step 5900/10000: annealing=0.6063 [P3:harden], lr=5.24e-04, time=4396.3s
+Step 6000/10000: annealing=0.6250 [P3:harden], lr=5.05e-04, time=4473.0s
+Step 6100/10000: annealing=0.6438 [P3:harden], lr=4.86e-04, time=4549.4s
+Step 6200/10000: annealing=0.6625 [P3:harden], lr=4.66e-04, time=4624.9s
+Step 6300/10000: annealing=0.6813 [P3:harden], lr=4.47e-04, time=4702.4s
+Step 6400/10000: annealing=0.7000 [P3:harden], lr=4.28e-04, time=4776.5s
+Step 6500/10000: annealing=0.7188 [P3:harden], lr=4.08e-04, time=4850.1s
+Step 6600/10000: annealing=0.7375 [P3:harden], lr=3.89e-04, time=4924.4s
+Step 6700/10000: annealing=0.7563 [P3:harden], lr=3.71e-04, time=4998.2s
+Step 6800/10000: annealing=0.7750 [P3:harden], lr=3.52e-04, time=5076.3s
+Step 6900/10000: annealing=0.7938 [P3:harden], lr=3.34e-04, time=5151.0s
+Step 7000/10000: annealing=0.8125 [P3:harden], lr=3.16e-04, time=5224.5s
+Step 7100/10000: annealing=0.8313 [P3:harden], lr=2.98e-04, time=5297.7s
+Step 7200/10000: annealing=0.8500 [P3:harden], lr=2.80e-04, time=5370.9s
+Step 7300/10000: annealing=0.8688 [P3:harden], lr=2.63e-04, time=5444.0s
+Step 7400/10000: annealing=0.8875 [P3:harden], lr=2.46e-04, time=5517.2s
+Step 7500/10000: annealing=0.9063 [P3:harden], lr=2.30e-04, time=5590.3s
+Step 7600/10000: annealing=0.9250 [P3:harden], lr=2.14e-04, time=5663.6s
+Step 7700/10000: annealing=0.9438 [P3:harden], lr=1.99e-04, time=5736.8s
+Step 7800/10000: annealing=0.9625 [P3:harden], lr=1.84e-04, time=5810.2s
+Step 7900/10000: annealing=0.9813 [P3:harden], lr=1.69e-04, time=5883.3s
+Step 8000/10000: annealing=1.0000 [done], lr=1.55e-04, time=5956.5s
+Step 8100/10000: annealing=1.0000 [done], lr=1.42e-04, time=6029.9s
+Step 8200/10000: annealing=1.0000 [done], lr=1.29e-04, time=6103.4s
+Step 8300/10000: annealing=1.0000 [done], lr=1.16e-04, time=6177.1s
+Step 8400/10000: annealing=1.0000 [done], lr=1.05e-04, time=6250.5s
+Step 8500/10000: annealing=1.0000 [done], lr=9.34e-05, time=6323.9s
+Step 8600/10000: annealing=1.0000 [done], lr=8.29e-05, time=6397.3s
+Step 8700/10000: annealing=1.0000 [done], lr=7.31e-05, time=6470.9s
+Step 8800/10000: annealing=1.0000 [done], lr=6.40e-05, time=6544.9s
+Step 8900/10000: annealing=1.0000 [done], lr=5.55e-05, time=6618.5s
+Step 9000/10000: annealing=1.0000 [done], lr=4.77e-05, time=6692.0s
+Step 9100/10000: annealing=1.0000 [done], lr=4.06e-05, time=6765.5s
+Step 9200/10000: annealing=1.0000 [done], lr=3.42e-05, time=6839.1s
+Step 9300/10000: annealing=1.0000 [done], lr=2.86e-05, time=6912.6s
+Step 9400/10000: annealing=1.0000 [done], lr=2.37e-05, time=6987.6s
+Step 9500/10000: annealing=1.0000 [done], lr=1.95e-05, time=7061.0s
+Step 9600/10000: annealing=1.0000 [done], lr=1.61e-05, time=7135.1s
+Step 9700/10000: annealing=1.0000 [done], lr=1.34e-05, time=7208.6s
+Step 9800/10000: annealing=1.0000 [done], lr=1.15e-05, time=7282.2s
+Step 9900/10000: annealing=1.0000 [done], lr=1.04e-05, time=7355.6s
+Step 10000/10000: annealing=1.0000 [done], lr=1.00e-05, time=7429.3s
+
+Training completed
+
+
+======================================================================
+Evaluating all temperatures (VFE + observables)...
+======================================================================
+beta=0.10  F/n=-7.029128±0.000208  E/n=-0.196836±0.000638  |M|=0.031092±0.000123  Cv/n=0.020361
+beta=0.12  F/n=-5.810277±0.000168  E/n=-0.241409±0.000777  |M|=0.032750±0.000130  Cv/n=0.030999
+beta=0.14  F/n=-4.974910±0.000138  E/n=-0.287006±0.000919  |M|=0.034576±0.000137  Cv/n=0.043554
+beta=0.16  F/n=-4.371646±0.000120  E/n=-0.333277±0.001064  |M|=0.036959±0.000146  Cv/n=0.059884
+beta=0.19  F/n=-3.919540±0.000114  E/n=-0.380471±0.001212  |M|=0.039335±0.000156  Cv/n=0.078377
+beta=0.21  F/n=-3.569870±0.000109  E/n=-0.428241±0.001363  |M|=0.042292±0.000167  Cv/n=0.100688
+beta=0.23  F/n=-3.292840±0.000110  E/n=-0.476804±0.001516  |M|=0.045367±0.000180  Cv/n=0.125999
+beta=0.25  F/n=-3.069216±0.000118  E/n=-0.526874±0.001674  |M|=0.049134±0.000195  Cv/n=0.156093
+beta=0.27  F/n=-2.886897±0.000130  E/n=-0.577648±0.001834  |M|=0.053496±0.000212  Cv/n=0.191581
+beta=0.28  F/n=-2.735691±0.000146  E/n=-0.630124±0.002000  |M|=0.058282±0.000231  Cv/n=0.230750
+beta=0.30  F/n=-2.609793±0.000162  E/n=-0.683734±0.002169  |M|=0.064460±0.000255  Cv/n=0.277619
+beta=0.32  F/n=-2.504188±0.000184  E/n=-0.739200±0.002344  |M|=0.071992±0.000285  Cv/n=0.329356
+beta=0.34  F/n=-2.415606±0.000207  E/n=-0.796853±0.002526  |M|=0.081360±0.000321  Cv/n=0.388535
+beta=0.35  F/n=-2.340576±0.000227  E/n=-0.855466±0.002712  |M|=0.092664±0.000366  Cv/n=0.457989
+beta=0.37  F/n=-2.277275±0.000245  E/n=-0.916900±0.002906  |M|=0.107145±0.000422  Cv/n=0.541696
+beta=0.39  F/n=-2.223839±0.000260  E/n=-0.980844±0.003108  |M|=0.127370±0.000500  Cv/n=0.635821
+beta=0.40  F/n=-2.179088±0.000272  E/n=-1.047310±0.003319  |M|=0.156146±0.000609  Cv/n=0.756778
+beta=0.41  F/n=-2.141731±0.000291  E/n=-1.116561±0.003538  |M|=0.196264±0.000757  Cv/n=0.886748
+beta=0.43  F/n=-2.110750±0.000325  E/n=-1.189320±0.003768  |M|=0.257819±0.000973  Cv/n=1.051843
+beta=0.44  F/n=-2.085296±0.000359  E/n=-1.266285±0.004012  |M|=0.347534±0.001263  Cv/n=1.241904
+beta=0.45  F/n=-2.064318±0.000377  E/n=-1.346658±0.004266  |M|=0.465221±0.001615  Cv/n=1.376897
+beta=0.46  F/n=-2.046564±0.000359  E/n=-1.426350±0.004517  |M|=0.591825±0.001970  Cv/n=1.377402
+beta=0.48  F/n=-2.030907±0.000315  E/n=-1.502320±0.004756  |M|=0.703433±0.002275  Cv/n=1.230605
+beta=0.49  F/n=-2.016621±0.000255  E/n=-1.572145±0.004976  |M|=0.787165±0.002511  Cv/n=1.046457
+beta=0.51  F/n=-2.003556±0.000193  E/n=-1.633169±0.005168  |M|=0.843363±0.002676  Cv/n=0.864016
+beta=0.53  F/n=-1.991727±0.000152  E/n=-1.686817±0.005337  |M|=0.882763±0.002795  Cv/n=0.724620
+beta=0.55  F/n=-1.981139±0.000117  E/n=-1.734433±0.005487  |M|=0.911882±0.002886  Cv/n=0.604129
+beta=0.57  F/n=-1.971843±0.000092  E/n=-1.776020±0.005618  |M|=0.934073±0.002955  Cv/n=0.499767
+beta=0.60  F/n=-1.963802±0.000072  E/n=-1.812365±0.005732  |M|=0.951521±0.003010  Cv/n=0.410232
+beta=0.63  F/n=-1.956995±0.000057  E/n=-1.843530±0.005830  |M|=0.965131±0.003052  Cv/n=0.331421
+beta=0.67  F/n=-1.951384±0.000047  E/n=-1.869490±0.005912  |M|=0.975620±0.003085  Cv/n=0.258873
+beta=0.71  F/n=-1.946889±0.000039  E/n=-1.891073±0.005980  |M|=0.983811±0.003111  Cv/n=0.195193
+beta=0.77  F/n=-1.943436±0.000032  E/n=-1.908233±0.006035  |M|=0.990037±0.003131  Cv/n=0.138348
+beta=0.85  F/n=-1.940934±0.000027  E/n=-1.921305±0.006076  |M|=0.994574±0.003145  Cv/n=0.089249
+beta=0.95  F/n=-1.939278±0.000020  E/n=-1.930322±0.006104  |M|=0.997604±0.003155  Cv/n=0.048187
+beta=1.00  F/n=-1.938920±0.000021  E/n=-1.932352±0.006111  |M|=0.998281±0.003157  Cv/n=0.037213
+VFE saved  → out/L32_obc/L32_OBC_multitemp_seed7_vfe_multitemp.txt
+Obs saved  → out/L32_obc/L32_OBC_multitemp_seed7_observables.txt
+======================================================================
+
+Final model saved to out/L32_obc/L32_OBC_multitemp_seed7_final.pt
+Summary saved to out/L32_obc/L32_OBC_multitemp_seed7_summary.txt

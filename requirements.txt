@@ -1,0 +1,43 @@
+# ---------------------------------------------------------------
+# Python dependencies for the Variational Neural Annealing project.
+#
+# Verified combination:
+#     Python 3.11
+#     PyTorch 2.6.0+cu126
+#     flash-attn 2.7.4.post1 (cu12torch2.6, cxx11abi matching torch)
+#
+# IMPORTANT — install order matters; do NOT run
+# `pip install -r requirements.txt` as the very first step.
+# Follow §4 of README.md instead. The recipe is:
+#
+#   1) conda create -n python311 python=3.11 -y && conda activate python311
+#
+#   2) pip install torch==2.6.0 torchvision==0.21.0 torchaudio==2.6.0 \
+#                  --index-url https://download.pytorch.org/whl/cu126
+#
+#   3) pip install -r requirements.txt          # <-- this file
+#
+#   4) Download the matching flash-attn wheel from
+#         https://github.com/Dao-AILab/flash-attention/releases
+#      (pick cxx11abiTRUE / FALSE according to torch._C._GLIBCXX_USE_CXX11_ABI)
+#      and pip install it directly:
+#         pip install flash_attn-2.7.4.post1+cu12torch2.6cxx11abiTRUE-cp311-cp311-linux_x86_64.whl
+# ---------------------------------------------------------------
+
+# Core scientific stack
+numpy>=1.24,<2.0
+scipy>=1.10
+networkx>=3.0
+pandas>=2.0
+tqdm>=4.65
+
+# Plotting
+matplotlib>=3.7
+
+# Build prerequisites for flash-attn (used in step 4 above)
+packaging
+ninja
+
+# Minimum-version sanity check; the actual torch wheel is installed
+# in step 2 from PyTorch's CUDA-12.6 index, NOT from PyPI.
+torch>=2.6
